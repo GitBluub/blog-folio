@@ -1,18 +1,21 @@
 <template>
   <div>
-    <h1>Blog Posts</h1>
-    <div class="flex">
-      <div v-for="article of articles" :key="article.slug" class="w-3/4">
-        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-          <div class="flex border">
-            <img :src="article.img" class="w-1/12 h-16 mr-4"/>
-            <div>
-              <h2 class="">{{ article.title }}</h2>
-              <p class="">{{ article.description }}</p>
-              <p class="">Written by : {{ article.author.name }}</p>
+    <h1 class="text-center text-6xl">Recently published</h1>
+    <div class="">
+      <div v-for="(article, index) in articles" :key="article.slug" class="w-3/4">
+        <div class="flex pb-4 pl-4">
+          <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+            <div 
+              @mouseover="hover = index"
+              @mouseleave="hover = -1">
+              <h2 class="text-4xl" :class="{ activeTitle: hover == index}">{{ article.title }}</h2>
+              <p class="" :class="{ activeDesc: hover == index}">{{ article.description }}</p>
+              <!-- Possible Written by if multiple people write articles, useless in my case
+              <p class="" :class="{ activeWrittenBy: hover == index}">Written by : {{ article.author.name }}</p>
+              -->
             </div>
-          </div>
-        </NuxtLink>
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </div>
@@ -24,9 +27,16 @@
       const articles = await $content('articles').fetch()
 
       return {
-        articles
+        articles,
+        hover: -1
       }
     }
   }
   
 </script>
+
+<style>
+.activeTitle {
+  color: #e53170;
+}
+</style>

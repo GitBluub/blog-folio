@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="h-screen w-screen flex flex-col h-full">
-      <Header class="flex-initial"/>
       <Nuxt class="flex-1"/>
     </div>
   </div>
 </template>
+
 
 <style>
 html {

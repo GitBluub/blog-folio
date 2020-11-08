@@ -1,19 +1,20 @@
 <template>
   <div>
-    <h1>Blog Posts</h1>
-    <ul>
-      <li v-for="article of articles" :key="article.slug">
-        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-          <div class="flex">
-            <img :src="article.img" />
-            <div>
-              <h2>{{ article.title }}</h2>
-              <p>by {{ article.author.name }}</p>
-              <p>{{ article.description }}</p>
-            </div>
-          </div>
-        </NuxtLink>
-      </li>
-    </ul>
+    <div class="flex justify-center flex-col h-full">
+      <div class="flex justify-center">
+        <img class="w-1/5 h-1/5 rounded-full hover:border" src="pp.jpg" />
+        <div class="ml-10 flex flex-col justify-around">
+          <nuxt-link to="/about" class="text-left text-4xl hover:text-white">About Me</nuxt-link>
+          <nuxt-link to="/projects" class="text-left text-4xl hover:text-white">My Projects</nuxt-link>
+          <nuxt-link to="/blog" class="text-left text-4xl hover:text-white">My Blog</nuxt-link>
+        </div>
+        </div>
+    </div>
   </div>
 </template>
+
+<script>
+export default {
+  layout: "no_header"
+}
+</script>

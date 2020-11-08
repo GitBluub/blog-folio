@@ -9,11 +9,15 @@ author:
     image: /incredible_putin.png
 ---
 
-# My first blog post
+# How I created this blog / portfolio
 
-Welcome to my first blog post using content module
+I recently created this blog / portfolio 
+and I'm going to explain how I did it.
+But why would I make that in the first place?
 
-## heading
+## Why I'm making this blog
+
+
 
 wowow
 

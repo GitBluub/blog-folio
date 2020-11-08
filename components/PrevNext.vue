@@ -1,21 +1,23 @@
 <template>
   <div class="flex justify-between">
-    <NuxtLink
-      v-if="prev"
-      :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
-      class="text-primary font-bold hover:underline"
-    >
-      {{ prev.title }}
-    </NuxtLink>
-    <span v-else>&nbsp;</span>
-    <NuxtLink
-      v-if="next"
-      :to="{ name: 'blog-slug', params: { slug: next.slug } }"
-      class="font-bold hover:underline"
-    >
-      {{ next.title }}
-    </NuxtLink>
-    <span v-else>&nbsp;</span>
+    <div class="flex flex-col pl-1 pr-10">
+      <p> Previous Post: </p>
+      <NuxtLink
+        v-if="prev"
+        :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
+        class="text-primary font-bold hover:underline">
+        {{ prev.title }}
+      </NuxtLink>
+    </div>
+    <div class="flex flex-col p-1">
+      <p> Next Post: </p>
+      <NuxtLink
+        v-if="next"
+        :to="{ name: 'blog-slug', params: { slug: next.slug } }"
+        class="font-bold hover:underline">
+        {{ next.title }}
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
