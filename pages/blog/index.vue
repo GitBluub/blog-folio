@@ -10,7 +10,7 @@
               @mouseleave="hover = -1">
               <h2 class="text-4xl" :class="{ activeTitle: hover == index}">{{ article.title }}</h2>
               <p class="" :class="{ activeDesc: hover == index}">{{ article.description }}</p>
-              <!-- Possible Written by if multiple people write articles, useless in my case
+              <!-- Possible "Written by" if multiple people write articles, useless in my case
               <p class="" :class="{ activeWrittenBy: hover == index}">Written by : {{ article.author.name }}</p>
               -->
             </div>
