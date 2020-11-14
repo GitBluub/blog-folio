@@ -9,4 +9,4 @@ techs: ["javascript","html"]
 
 # 42sh, a linux shell
 
-This project is my first large project I worked on. The last project we had to do
+This project is my first large project I worked on.

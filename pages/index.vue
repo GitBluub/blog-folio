@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex justify-center flex-col h-full">
-      <div class="flex justify-center">
+      <div class="md:flex justify-center">
         <img class="w-1/5 h-1/5 rounded-full" src="pp.jpg" />
         <div class="ml-10 flex flex-col justify-around">
           <nuxt-link to="/about" class="text-left text-4xl hover:text-white">About Me</nuxt-link>
