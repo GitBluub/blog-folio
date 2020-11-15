@@ -5,7 +5,7 @@ description: BlogFolio is exactly this website which serves for me as a Portfoli
 alt: nyee
 language: C
 libraries: none
-techs: ["javascript","html", "Vue", "Nuxt"]
+techs: ["html", "css", "javascript", "vuejs"]
 ---
 
 # 42sh, a linux shell
