@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 class="mb-16 mt-5 text-center text-4xl">Some projects I have done</h1>
+        <h1 class="mb-12 mt-5 text-center text-xl md:text-2xl lg:text-3xl xl:text-4xl">Some projects I have done</h1>
         <div class="flex flex-wrap w-full">
             <div v-for="project in projects" :key="project.slug" class="pl-5 pr-5 lg:pr-10 pb-12 w-full lg:w-1/2">
                 <div class="border rounded flex-shrink-0 text-left flex h-full w-full">
