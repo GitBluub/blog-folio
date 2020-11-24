@@ -1,7 +1,6 @@
 <template>
     <projectPage>
-      <h1 class="text-center text-6xl text-headline"> {{ project.project_name }} </h1>
-      <nuxt-content :document="project" />
+      <nuxt-content class="ml-6" id="content" :document="project" />
     </projectPage>
 </template>
 
@@ -15,3 +14,26 @@
     }
   }
 </script>
+
+<style>
+#content h1{
+  font-size:  3.75rem;
+  text-align: center;
+  color: #fffffe;
+  margin-bottom: 20px;
+}
+#content h2{
+  font-size:  3rem;
+  color: #fffffe;
+  margin-bottom: 10px;
+}
+#content a {
+  color: #fffffe;
+}
+#content a:hover {
+  color: #ff8906;
+}
+#content {
+  font-size: 1.5rem;
+} 
+</style>
