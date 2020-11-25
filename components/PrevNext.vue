@@ -1,18 +1,16 @@
 <template>
   <div class="flex justify-between">
-    <div class="flex flex-col pl-1 pr-10">
+    <div v-if="prev" class="flex flex-col pl-1 pr-10">
       <p class="text-left"> Previous Post: </p>
       <NuxtLink
-        v-if="prev"
         :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
         class="text-primary font-bold hover:underline">
         {{ prev.title }}
       </NuxtLink>
     </div>
-    <div class="flex flex-col p-1">
+    <div v-if="next" class="flex flex-col p-1">
       <p class="text-left"> Next Post: </p>
       <NuxtLink
-        v-if="next"
         :to="{ name: 'blog-slug', params: { slug: next.slug } }"
         class="font-bold hover:underline">
         {{ next.title }}
