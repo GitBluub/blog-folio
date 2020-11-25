@@ -1,6 +1,6 @@
 <template>
   <article>
-    <nuxt-content :document="article" />
+    <nuxt-content id="content" class="text-left" :document="article" />
     <p>Post last updated: {{ formatDate(article.updatedAt) }}</p>
     <prev-next :prev="prev" :next="next" />
   </article>
@@ -33,26 +33,29 @@
 </script>
 
 <style>
-.nuxt-content h1 {
-  font-weight: bold;
-  font-size: 40px;
+#content h1{
+  font-size:  3.75rem;
+  text-align: center;
+  color: #fffffe;
+  margin-bottom: 20px;
 }
-
-.nuxt-content h2 {
-  font-weight: bold;
-  font-size: 28px;
-}
-.nuxt-content h3 {
-  font-weight: bold;
-  font-size: 22px;
+#content h2{
+  font-size:  3rem;
+  color: #fffffe;
+  margin-bottom: 10px;
 }
 .nuxt-content p {
   margin-bottom: 20px;
 }
+
+#content a {
+  color: #fffffe;
+}
+#content a:hover {
+  color: #ff8906;
+}
+
 .desc {
   color: #a7a9be;
-}
-h1, h2, h3, p, a {
-  text-align: center;
 }
 </style>
